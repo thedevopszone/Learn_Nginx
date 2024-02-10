@@ -32,3 +32,34 @@ server {
 
 }
 ```
+
+
+## From Cloud Guru
+
+```
+server {
+    listen 80 default_server;
+    server_name _;
+    return 301 https://$host$request_uri;
+}
+
+
+server {
+    listen 443 ssl;
+    server_name _;
+
+    ssl_certificate /etc/nginx/ssl/public.pem;
+    ssl_certificate_key /etc/nginx/ssl/private.key;
+
+    location / {
+        proxy_pass http://localhost:8080;
+    }
+
+}
+```
+
+
+
+
+
+
