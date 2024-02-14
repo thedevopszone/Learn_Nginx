@@ -54,10 +54,10 @@ vi /etc/nginx/conf.d/jenkins.conf
 ```
 server {
   listen 80;
-  server_name xxx.de;
+  server_name test.home54.de;
 
   location / {
-    proxy_pass http://172.xxxx:8080;
+    proxy_pass http://172.16.0.82:8080;
   }
 
 }
@@ -65,13 +65,13 @@ server {
  
 server {
   listen 443 ssl;
-  server_name xxx.de;
+  server_name test.home54.de;
 
-  ssl_certificate /etc/nginx/ssl/xxx.crt;
-  ssl_certificate_key /etc/nginx/ssl/xxx.key;
+  ssl_certificate /etc/nginx/ssl/home54.crt;
+  ssl_certificate_key /etc/nginx/ssl/home54.key;
 
   location / {
-    proxy_pass http://172.xxxx:8080;
+    proxy_pass http://172.16.0.82:8080;
   }
 
 }
