@@ -1,6 +1,13 @@
 # Learn Nginx
 
 
+## Testing Hostnames on your host
+
+```
+curl -H Host:github.devopszone.de 127.0.0.1
+```
+
+
 ## Nginx as Reverse Proxy for Podman/Docker
 
 
